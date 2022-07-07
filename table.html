@@ -34,8 +34,13 @@
                         
                     });
 
-                    $("#sort-table").DataTable({
+                    var table = $("#sort-table").DataTable({
                         renderer: "bootstrap"
+                    });
+                    $('#search-reset').click(function(){
+                        table
+                        .search( '' )
+                        .draw();
                     });
 
                     
@@ -81,7 +86,13 @@
     </style>
 </head>
 <body>
+    <div class="container-fluid">
+        <h2>初年次教育学会学会誌掲載データインデックス</h2>
+    </div>
     <div class="container-fluid ">
+        <div align="right">
+            <button id="search-reset">reset</button>
+        </div>
         <table id="sort-table" class="table table-bordered p">
             <thead>
                 <tr>
