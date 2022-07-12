@@ -28,18 +28,15 @@
                     $("#result").append(insert);
                     insert = "";
                 };
-            }
-            //CSVの読み込み
-            $.get('data.csv', parseCsv, 'text');
 
-
-            $(document).ready(function () {    
                 $('#sort-table').DataTable({
                     "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/Japanese.json"
                     }
                 });
-            });
+            }
+            //CSVの読み込み
+            $.get('data.csv', parseCsv, 'text');
         });
     </script>
     
@@ -82,7 +79,7 @@
         <h2>初年次教育学会学会誌掲載データインデックス</h2>
     </div>
     <div class="container-fluid ">
-        <table id="sort-table" class="table display p">
+        <table id="sort-table" class="display">
             <thead>
                 <tr>
                     <th>vol</th>
